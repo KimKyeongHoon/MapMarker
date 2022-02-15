@@ -9,7 +9,7 @@
  - 내가 방문한 지역 체크 및 찍은 사진으로 배경 대체
 4. react-router
 
-## 프로젝트 구조
+# 프로젝트 구조
 npm run start
 
 CRA
@@ -30,3 +30,9 @@ MapMarker/
   ├─── App.tsx: 앱 컴포넌트
   └─── index.tsx: 클라이언트 진입점
 ```
+
+# 브랜치
+ - 마스터 브랜치(릴리스) : master
+ - 기본 작업 브랜치 : develop
+ - 이외 develop을 기본으로 추가 브랜치 생성
+ - 릴리즈시 develop에서 master로 merge
