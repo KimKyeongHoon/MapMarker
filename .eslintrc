@@ -13,7 +13,8 @@
       "jsx-a11y/no-static-element-interactions": "off",
       "react/require-default-props": "off",
       "no-multiple-empty-lines":"error",
-      "no-unused-vars":"error"
+      "no-unused-vars":"error",
+      "no-console":"error"
     }
   }
   
