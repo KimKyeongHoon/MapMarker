@@ -1,9 +1,10 @@
 import React from 'react';
+import KakaoMap from './components/KakaoMap';
 
 function App() {
   return (
     <>
-    s
+      <KakaoMap/>
     </>
   );
 }
