@@ -4,4 +4,5 @@ import java.util.Map;
 
 public interface UserService {
     public Map<String, String> test(String key);
+
 }

@@ -15,6 +15,7 @@ import java.util.Map;
 public class UserController {
 
     private final UserService userService;
+    private static int tmp = 0;
 
     @Autowired
     public UserController(UserService userService){
@@ -25,5 +26,6 @@ public class UserController {
     public ResponseEntity<Map<String, String>> test(@RequestParam String key){
         return ResponseEntity.ok().body(userService.test(key));
     }
+
 
 }
