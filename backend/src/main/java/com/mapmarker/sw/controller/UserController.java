@@ -1,6 +1,8 @@
 package com.mapmarker.sw.controller;
 
 import com.mapmarker.sw.service.UserService;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +17,6 @@ import java.util.Map;
 public class UserController {
 
     private final UserService userService;
-    private static int tmp = 0;
 
     @Autowired
     public UserController(UserService userService){
@@ -23,7 +24,8 @@ public class UserController {
     }
 
     @GetMapping("test")
-    public ResponseEntity<Map<String, String>> test(@RequestParam String key){
+    @ApiOperation(value="테스트 Request", response = Map.class)
+    public ResponseEntity<Map<String, String>> test(@ApiParam @RequestParam String key){
         return ResponseEntity.ok().body(userService.test(key));
     }
 
