@@ -11,7 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 @Api("Interceptor")
 public class AuthenticationInterceptor implements HandlerInterceptor {
 
-    public boolean preHandler(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception{
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception{
         return true;
     }
 
