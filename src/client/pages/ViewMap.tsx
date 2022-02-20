@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classnames from "classnames";
-import KakaoMap from "../components/KakaoMap";
+import KakaoMap from "client/components/KakaoMap";
 import style from "./ViewMap.scss";
 
 const ViewMap = () => {
