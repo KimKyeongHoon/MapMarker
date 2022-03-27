@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <div className={style.root}>
-      <a href="#" className={style.header_link}>
+      <a href="/MapMarker" className={style.header_link}>
         <strong className={style.logo}>Map Marker</strong>
       </a>
       <div className={style.function_wrap}>
@@ -35,7 +35,7 @@ const Header = () => {
               <a href="#" className={style.link}>
                 설정
               </a>
-              <a href="#" className={style.link}>
+              <a href="/MapMarker/profile" className={style.link}>
                 프로필
               </a>
               <a href="#" className={style.link}>

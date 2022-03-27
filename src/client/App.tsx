@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ViewMap from "./pages/ViewMap";
 import Header from "./components/common/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Bottom, { TabType } from "./components/common/Bottom";
 import "client/scss/reset.scss";
 import Profile from "./pages/Profile";
@@ -24,15 +25,19 @@ function App() {
         return <ViewMap />;
     }
   };
+  const isLocalDev = !true;
 
   return (
-    <>
-      {/* [D] Render에서 min-width 설정 */}
+    <BrowserRouter>
+      {/* [D] Render에서 min-width 설정, Router path 정리 */}
       <Header />
-      {/*renderMap(nowMapType)*/}
-      <Profile />
+      <Routes>
+        <Route path="/MapMarker" element={renderMap(nowMapType)} />
+        <Route path="/MapMarker/profile" element={<Profile />} />
+        <Route path="*" element={renderMap(nowMapType)} />
+      </Routes>
       <Bottom onClickTab={handleMapType} />
-    </>
+    </BrowserRouter>
   );
 }
 
