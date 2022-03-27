@@ -27,7 +27,7 @@ const Profile = () => {
     <div className={style.root}>
       <div className={style.info_wrap}>
         <div className={style.profile_wrap}>
-          <img src="" alt="내 프로필 이미지" className={style.profile_img} />
+          <img src="" alt="내 프로필" className={style.profile_img} />
           <button type="button" className={style.friend_btn}>
             친구 추가
           </button>

@@ -32,9 +32,9 @@ function App() {
       {/* [D] Render에서 min-width 설정, Router path 정리 */}
       <Header />
       <Routes>
-        <Route path="/MapMarker" element={renderMap(nowMapType)} />
-        <Route path="/MapMarker/profile" element={<Profile />} />
-        <Route path="*" element={renderMap(nowMapType)} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/" element={renderMap(nowMapType)} />
+        {/* <Route path="*" element={renderMap(nowMapType)} /> */}
       </Routes>
       <Bottom onClickTab={handleMapType} />
     </BrowserRouter>
