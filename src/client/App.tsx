@@ -28,7 +28,7 @@ function App() {
   const isLocalDev = !true;
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       {/* [D] Render에서 min-width 설정, Router path 정리 */}
       <Header />
       <Routes>
