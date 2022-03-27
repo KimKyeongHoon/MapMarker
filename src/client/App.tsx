@@ -3,6 +3,7 @@ import ViewMap from "./pages/ViewMap";
 import Header from "./components/common/Header";
 import Bottom, { TabType } from "./components/common/Bottom";
 import "client/scss/reset.scss";
+import Profile from "./pages/Profile";
 
 function App() {
   const [nowMapType, setMapType] = useState(TabType.Map);
@@ -20,7 +21,7 @@ function App() {
       case TabType.FriendList:
         return "친구목록";
       default:
-        return null;
+        return <ViewMap />;
     }
   };
 
@@ -28,7 +29,8 @@ function App() {
     <>
       {/* [D] Render에서 min-width 설정 */}
       <Header />
-      {renderMap(nowMapType)}
+      {/*renderMap(nowMapType)*/}
+      <Profile />
       <Bottom onClickTab={handleMapType} />
     </>
   );
