@@ -1,0 +1,113 @@
+@import "../scss/mixin.scss";
+
+.root {
+  margin-top: 41px;
+}
+
+.info_wrap {
+  display: flex;
+  min-height: 100px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile_wrap {
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.profile_img {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid #eee;
+  }
+}
+
+.friend_btn {
+  margin-top: 10px;
+  padding: 4px 2px;
+  border-radius: 3px;
+  border: 1px solid #eee;
+}
+
+.info {
+  flex-grow: 1;
+  margin-left: auto;
+}
+
+.name {
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.2px;
+  color: 222;
+}
+
+.desc {
+  margin-top: 7px;
+  font-size: 13px;
+  line-height: 15px;
+  color: rgba(#000, 0.8);
+
+  > .ell {
+    @include ellipsis(2);
+  }
+}
+
+.text_wrap {
+  margin-top: 8px;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 16px;
+
+  & + & {
+    margin-left: 10px;
+  }
+}
+
+.image_wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  position: relative;
+  flex-basis: 33.3333%;
+  display: block;
+  padding-bottom: 33.3333%;
+  border: 1px solid #666;
+  border-width: 0 1px 1px 0;
+  box-sizing: border-box;
+  background-color: #666;
+
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+}
+
+.inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.img {
+  @include imgCover;
+  box-shadow: 0 5px 10px 0 rgba(#222, 0.4);
+}

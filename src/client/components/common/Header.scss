@@ -1,0 +1,108 @@
+@import "../../scss/mixin.scss";
+
+.root {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  height: 40px;
+  background-color: #eee;
+  border-bottom: 1px solid #222;
+}
+
+.header_link {
+  display: block;
+  padding: 8px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: -0.3px;
+}
+
+.function_wrap {
+  position: relative;
+  margin-left: auto;
+}
+
+.function_btn {
+  padding: 8px;
+}
+
+.function_icon {
+  @include flexAlignCenter;
+  width: 40px;
+  height: 24px;
+}
+
+.function_layer {
+  @include fadein;
+  position: absolute;
+  top: 43px;
+  right: 11px;
+  display: flex;
+  width: 200px;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: #fff;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    right: 7px;
+    width: 0px;
+    height: 0px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 7px solid #fff;
+  }
+}
+
+.profile_wrap {
+  padding: 10px;
+}
+
+.profile_img {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    border: 1px solid #eee;
+  }
+}
+
+.link_wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-left: 10px;
+  border-left: 1px solid #eee;
+}
+
+.link {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.3px;
+
+  & + & {
+    margin-top: 5px;
+  }
+}
